@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <title>SaveVault - Game Save Backup Tool</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+<body class="bg-[#0B0F19] text-[#F9FAFB] font-sans antialiased select-none overflow-hidden h-screen w-screen m-0 p-0">
+    <div id="app" class="h-full w-full flex flex-col">
+        <div class="flex items-center justify-center h-full">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                <div class="text-slate-400 text-sm font-medium">Đang khởi động SaveVault...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui" class="hidden fixed bottom-4 right-4 bg-red-900 border border-red-500 text-red-100 px-4 py-3 rounded-lg shadow-xl z-50 text-xs">
+        Đã xảy ra lỗi không xác định. Vui lòng tải lại ứng dụng.
+        <a href="" class="underline ml-2 text-white font-bold">Tải lại</a>
+    </div>
+
+    <script src="_framework/blazor.webview.js"></script>
+    <script>
+        window.galleryHelper = {
+            observer: null,
+            init: function (elementId, dotNetHelper) {
+                var el = document.getElementById(elementId);
+                if (!el) return;
+                if (this.observer) {
+                    this.observer.disconnect();
+                    this.observer = null;
+                }
+
+                var lastCols = 0;
+                var update = function () {
+                    if (!el) el = document.getElementById(elementId);
+                    if (!el) return;
+                    var width = el.clientWidth || window.innerWidth;
+                    var cardMin = 160;
+                    var gap = 16;
+                    var cols = Math.max(2, Math.floor((width + gap) / (cardMin + gap)));
+                    if (cols !== lastCols) {
+                        lastCols = cols;
+                        dotNetHelper.invokeMethodAsync('OnGalleryColumnsChanged', cols);
+                    }
+                };
+
+                if (window.ResizeObserver) {
+                    this.observer = new ResizeObserver(function () {
+                        update();
+                    });
+                    this.observer.observe(el);
+                }
+                update();
+            },
+            dispose: function () {
+                if (this.observer) {
+                    this.observer.disconnect();
+                    this.observer = null;
+                }
+            }
+        };
+
+        window.listboxHelper = {
+            observers: {},
+            init: function (elementId, dotNetHelper) {
+                var el = document.getElementById(elementId);
+                if (!el) return;
+
+                var check = function () {
+                    if (!el) el = document.getElementById(elementId);
+                    if (!el) return;
+                    var canScroll = (el.scrollHeight - el.scrollTop - el.clientHeight) > 10;
+                    dotNetHelper.invokeMethodAsync('OnListBoxScrollChanged', canScroll);
+                };
+
+                el.addEventListener('scroll', check, { passive: true });
+                if (window.ResizeObserver) {
+                    if (this.observers[elementId]) {
+                        this.observers[elementId].disconnect();
+                    }
+                    var ro = new ResizeObserver(function () {
+                        check();
+                    });
+                    ro.observe(el);
+                    this.observers[elementId] = ro;
+                }
+                setTimeout(check, 60);
+                check();
+            },
+            scrollDown: function (elementId) {
+                var el = document.getElementById(elementId);
+                if (!el) return;
+                el.scrollBy({ top: 90, behavior: 'smooth' });
+            },
+            dispose: function (elementId) {
+                if (this.observers[elementId]) {
+                    this.observers[elementId].disconnect();
+                    delete this.observers[elementId];
+                }
+            }
+        };
+
+        // Universal Scroll Indicator Helper (Tu dong kich hoat cho moi .sv-scroll-wrapper)
+        window.scrollHintHelper = {
+            attachedWrappers: new WeakSet(),
+            init: function () {
+                var self = this;
+                var scanAndAttach = function () {
+                    var wrappers = document.querySelectorAll('.sv-scroll-wrapper');
+                    for (var i = 0; i < wrappers.length; i++) {
+                        self.attach(wrappers[i]);
+                    }
+                };
+
+                if (window.MutationObserver) {
+                    var mo = new MutationObserver(function () {
+                        scanAndAttach();
+                    });
+                    mo.observe(document.body, { childList: true, subtree: true });
+                }
+
+                setTimeout(scanAndAttach, 100);
+                setTimeout(scanAndAttach, 400);
+                setTimeout(scanAndAttach, 1000);
+            },
+            attach: function (wrapper) {
+                if (!wrapper || this.attachedWrappers.has(wrapper)) return;
+
+                var area = wrapper.querySelector('.sv-scroll-area');
+                if (!area) {
+                    for (var i = 0; i < wrapper.children.length; i++) {
+                        var c = wrapper.children[i];
+                        if (c.classList.contains('sv-scroll-area') || 
+                            window.getComputedStyle(c).overflowY === 'auto' || 
+                            window.getComputedStyle(c).overflowY === 'scroll') {
+                            area = c;
+                            break;
+                        }
+                    }
+                }
+                if (!area) return;
+
+                this.attachedWrappers.add(wrapper);
+
+                var gradient = wrapper.querySelector('.sv-scroll-gradient');
+                if (!gradient) {
+                    gradient = document.createElement('div');
+                    gradient.className = 'sv-scroll-gradient';
+                    wrapper.appendChild(gradient);
+                }
+
+                var hintBtn = wrapper.querySelector('.sv-scroll-hint-btn');
+                if (!hintBtn) {
+                    hintBtn = document.createElement('button');
+                    hintBtn.type = 'button';
+                    hintBtn.className = 'sv-scroll-hint-btn';
+                    var customText = wrapper.getAttribute('data-scroll-text') || 'Còn nội dung bên dưới (Cuộn)';
+                    hintBtn.innerHTML = '<span>▼</span><span>' + customText + '</span>';
+                    wrapper.appendChild(hintBtn);
+                }
+
+                hintBtn.onclick = function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var scrollAmount = Math.max(120, area.clientHeight * 0.7);
+                    area.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+                };
+
+                var check = function () {
+                    if (!area) return;
+                    var canScroll = (area.scrollHeight - area.scrollTop - area.clientHeight) > 15;
+                    if (canScroll) {
+                        wrapper.classList.add('has-overflow-down');
+                    } else {
+                        wrapper.classList.remove('has-overflow-down');
+                    }
+                };
+
+                area.addEventListener('scroll', check, { passive: true });
+
+                if (window.ResizeObserver) {
+                    var ro = new ResizeObserver(function () {
+                        check();
+                    });
+                    ro.observe(area);
+                    ro.observe(wrapper);
+                }
+
+                setTimeout(check, 60);
+                setTimeout(check, 250);
+                check();
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () {
+                window.scrollHintHelper.init();
+            });
+        } else {
+            window.scrollHintHelper.init();
+        }
+    </script>
+</body>
+</html>
