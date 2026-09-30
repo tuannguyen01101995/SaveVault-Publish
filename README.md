@@ -1,8 +1,8 @@
-# 🛡️ SaveVault - Game Save Manager & Cloud Vault (Portable)
+# 🛡️ Omnisave - Game Save Manager & Cloud Vault (Portable)
 
 <div align="center">
 
-![SaveVault Badge](https://img.shields.io/badge/SaveVault-v1.0.0-06b6d4?style=for-the-badge&logo=shield)
+![Omnisave Badge](https://img.shields.io/badge/Omnisave-v1.0.0-06b6d4?style=for-the-badge&logo=shield)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-blue?style=for-the-badge&logo=windows)
 ![Type](https://img.shields.io/badge/Type-Portable%20--%20No%20Install-emerald?style=for-the-badge)
 ![Cloud](https://img.shields.io/badge/Cloud-Google%20Drive%20%7C%20OneDrive-f59e0b?style=for-the-badge)
@@ -18,15 +18,15 @@
 
 ## ⚡ Tải Về & Khởi Chạy Cực Nhanh
 
-SaveVault được đóng gói ở định dạng **Portable Self-Contained**, bạn **không cần cài đặt**, không cần cài thêm .NET Runtime hay phần mềm phụ trợ.
+Omnisave được đóng gói ở định dạng **Portable Self-Contained**, bạn **không cần cài đặt**, không cần cài thêm .NET Runtime hay phần mềm phụ trợ.
 
 1. **Tải về**:
-   - Tải file nén mới nhất tại mục [Releases](https://github.com/tuannguyen01101995/SaveVault-Publish/releases) hoặc bấm nút xanh **Code > Download ZIP**.
+   - Tải file nén mới nhất tại mục [Releases](https://github.com/tuannguyen01101995/Omnisave-Publish/releases) hoặc bấm nút xanh **Code > Download ZIP**.
 2. **Giải nén**:
-   - Giải nén file `.zip` vào thư mục bất kỳ trên máy tính của bạn (Khuyên dùng: `D:\SaveVault` hoặc `C:\SaveVault`).
+   - Giải nén file `.zip` vào thư mục bất kỳ trên máy tính của bạn (Khuyên dùng: `D:\Omnisave` hoặc `C:\Omnisave`).
    - *Lưu ý: Tránh đặt trong thư mục `C:\Program Files` để ứng dụng có toàn quyền ghi file dữ liệu cấu hình portable mượt mà nhất.*
 3. **Khởi chạy**:
-   - Nhấp đúp chuột vào file **`SaveVault.exe`** ở thư mục gốc để mở ứng dụng ngay!
+   - Nhấp đúp chuột vào file **`Omnisave.exe`** ở thư mục gốc để mở ứng dụng ngay!
 
 ---
 
@@ -45,11 +45,11 @@ SaveVault được đóng gói ở định dạng **Portable Self-Contained**, b
 
 ## 📁 Cấu Trúc Thư Mục Phát Hành
 
-Khi giải nén gói SaveVault, bạn sẽ thấy cấu trúc thư mục được tổ chức rất gọn gàng:
+Khi giải nén gói Omnisave, bạn sẽ thấy cấu trúc thư mục được tổ chức rất gọn gàng:
 
 ```text
-SaveVault/
-├── 🚀 SaveVault.exe                # File chạy ứng dụng (Chỉ cần nhấp đúp vào đây)
+Omnisave/
+├── 🚀 Omnisave.exe                # File chạy ứng dụng (Chỉ cần nhấp đúp vào đây)
 ├── 📖 README.md                    # Tài liệu hướng dẫn sử dụng nhanh này
 ├── 📝 CHANGELOG.md                 # Nhật ký thay đổi và các điểm mới của phiên bản
 ├── ⚙️ version.json                 # Thông tin phiên bản phục vụ tự động cập nhật
@@ -72,8 +72,8 @@ SaveVault/
 ## 📖 Hướng Dẫn Sử Dụng Nhanh
 
 ### 1. Dò Tìm & Sao Lưu Save Game
-1. Mở SaveVault, tại ô tìm kiếm ở màn hình chính, gõ tên tựa game bạn muốn sao lưu (Ví dụ: `Elden Ring`, `Cyberpunk 2077`, `Black Myth: Wukong`...).
-2. SaveVault sẽ tự động quét ổ đĩa và hiển thị đường dẫn thư mục save thực tế trên máy của bạn kèm số lượng file và dung lượng.
+1. Mở Omnisave, tại ô tìm kiếm ở màn hình chính, gõ tên tựa game bạn muốn sao lưu (Ví dụ: `Elden Ring`, `Cyberpunk 2077`, `Black Myth: Wukong`...).
+2. Omnisave sẽ tự động quét ổ đĩa và hiển thị đường dẫn thư mục save thực tế trên máy của bạn kèm số lượng file và dung lượng.
 3. Bấm nút **"Sao Lưu Ngay"**:
    - Bản sao lưu sẽ được tạo trong thư mục `Backups/<Tên Game>/`.
    - Bạn có thể bật tùy chọn nén `.zip` hoặc tạo snapshot mốc thời gian tại màn hình hoặc trong tab Cài Đặt.
@@ -82,7 +82,7 @@ SaveVault/
 1. Chuyển sang tab **"Lịch Sử"**.
 2. Tìm game cần khôi phục trong danh sách.
 3. Nhấp vào bản sao lưu bạn muốn quay lại, sau đó bấm nút **"Khôi Phục"**.
-4. SaveVault sẽ tự động giải nén và đưa toàn bộ file save về chính xác thư mục gốc của game.
+4. Omnisave sẽ tự động giải nén và đưa toàn bộ file save về chính xác thư mục gốc của game.
 
 ---
 
@@ -104,29 +104,29 @@ Lưu trữ save game trên đám mây giúp bạn yên tâm tuyệt đối khi c
 
 ## ❓ Câu Hỏi Thường Gặp & Xử Lý Sự Cố (FAQ)
 
-### ❓ 1. Windows SmartScreen báo *"Windows protected your PC"* khi mở `SaveVault.exe`?
-- **Nguyên nhân**: SaveVault là phần mềm nguồn mở miễn phí, chưa đăng ký chứng chỉ số doanh nghiệp có phí hàng năm của Microsoft.
+### ❓ 1. Windows SmartScreen báo *"Windows protected your PC"* khi mở `Omnisave.exe`?
+- **Nguyên nhân**: Omnisave là phần mềm nguồn mở miễn phí, chưa đăng ký chứng chỉ số doanh nghiệp có phí hàng năm của Microsoft.
 - **Cách xử lý**: Nhấp vào chữ **"More info"** (Thông tin khác) > Bấm nút **"Run anyway"** (Vẫn chạy). Ứng dụng hoàn toàn sạch sẽ, không chứa mã độc.
 
 ### ❓ 2. Ứng dụng có tự nhận diện game crack / repack không?
-- **Có!** SaveVault hỗ trợ cơ chế phân giải đường dẫn thông minh, tự động quét các thư mục `%APPDATA%`, `%LOCALAPPDATA%`, `Saved Games`, `Documents` và các thư mục giả lập Steam phổ biến (Goldberg, CODEX, FLT, RUNE...).
+- **Có!** Omnisave hỗ trợ cơ chế phân giải đường dẫn thông minh, tự động quét các thư mục `%APPDATA%`, `%LOCALAPPDATA%`, `Saved Games`, `Documents` và các thư mục giả lập Steam phổ biến (Goldberg, CODEX, FLT, RUNE...).
 
 ### ❓ 3. Dữ liệu tài khoản đám mây của tôi có an toàn không?
-- **Tuyệt đối an toàn!** SaveVault hoạt động theo cơ chế Client-Side thuần túy (không gửi bất kỳ thông tin nào về máy chủ trung gian). Mã truy cập đám mây được mã hóa chuẩn **AES-256** và chỉ lưu trên chính máy tính của bạn trong tệp `data/config/app_config.json`.
+- **Tuyệt đối an toàn!** Omnisave hoạt động theo cơ chế Client-Side thuần túy (không gửi bất kỳ thông tin nào về máy chủ trung gian). Mã truy cập đám mây được mã hóa chuẩn **AES-256** và chỉ lưu trên chính máy tính của bạn trong tệp `data/config/app_config.json`.
 
 ### ❓ 4. Làm thế nào để cập nhật phiên bản mới?
-- Mỗi khi khởi động, nếu có bản cập nhật mới trên GitHub, SaveVault sẽ hiển thị thông báo. Bạn chỉ cần nhấn **"Cập Nhật Ngay"**, ứng dụng sẽ tự động tải gói cập nhật, kiểm tra tính toàn vẹn và nâng cấp mà không làm mất dữ liệu save hay cấu hình cũ của bạn.
+- Mỗi khi khởi động, nếu có bản cập nhật mới trên GitHub, Omnisave sẽ hiển thị thông báo. Bạn chỉ cần nhấn **"Cập Nhật Ngay"**, ứng dụng sẽ tự động tải gói cập nhật, kiểm tra tính toàn vẹn và nâng cấp mà không làm mất dữ liệu save hay cấu hình cũ của bạn.
 
 ---
 
 ## 💬 Hỗ Trợ & Đóng Góp Ý Kiến
 
-- Nếu bạn gặp lỗi hoặc muốn đề xuất tựa game mới, vui lòng tạo [GitHub Issue](https://github.com/tuannguyen01101995/SaveVault-Publish/issues).
-- Xem nhật ký các bản cập nhật tại [CHANGELOG.md](file:///c:/Users/TuanNguyen/Desktop/New%20folder%20%289%29/SaveVault/CHANGELOG.md).
+- Nếu bạn gặp lỗi hoặc muốn đề xuất tựa game mới, vui lòng tạo [GitHub Issue](https://github.com/tuannguyen01101995/Omnisave-Publish/issues).
+- Xem nhật ký các bản cập nhật tại [CHANGELOG.md](file:///c:/Users/TuanNguyen/Desktop/New%20folder%20%289%29/Omnisave/CHANGELOG.md).
 
 <div align="center">
 
-**SaveVault** — Được phát triển với niềm đam mê dành cho cộng đồng game thủ PC.  
+**Omnisave** — Được phát triển với niềm đam mê dành cho cộng đồng game thủ PC.  
 *Chúc bạn có những giờ phút chơi game vui vẻ và an tâm trọn vẹn!*
 
 </div>

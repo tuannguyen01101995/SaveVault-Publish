@@ -1,14 +1,13 @@
 {
-  "version": "1.2.0",
-  "releaseDate": "2026-09-29",
+  "version": "1.3.0",
+  "releaseDate": "2026-09-30",
   "minSupportedVersion": "1.0.0",
-  "downloadUrl": "https://github.com/tuannguyen01101995/SaveVault-Publish/archive/refs/heads/main.zip",
+  "downloadUrl": "https://github.com/tuannguyen01101995/Omnisave-Publish/archive/refs/heads/main.zip",
   "changelog": [
-    "🚀 Phát hành phiên bản SaveVault v1.2.0 với nhiều tính năng mới và nâng cấp trải nghiệm:",
-    "ℹ️ Bổ Sung Tab Thông Tin & Hỗ Trợ: Thêm tab chuyên biệt ngoài cùng bên phải thanh điều hướng sv-nav-bar, tích hợp cơ chế nạp tĩnh trực tiếp vào mã nguồn lúc build (Zero Disk I/O) giúp mở tức thì không tốn tài nguyên ổ đĩa.",
-    "📜 Xem Nhật Ký Phiên Bản: Thêm nút tra cứu lịch sử changelog trực tiếp tại card Phiên bản & Cập nhật trong Cài đặt với giao diện timeline trực quan.",
-    "☁️ Tối Ưu Thanh Dung Lượng Cloud: Sửa triệt để lỗi thanh dung lượng OneDrive bị tràn 100% khi còn trống và bổ sung khả năng nạp hạn mức chính xác cho Google Drive bằng Custom Credentials.",
-    "⚙️ Tinh Gọn Cấu Hình Google Drive: Lược bỏ chế độ 1-Click rườm rà và nút gạt Dev switch, tập trung trải nghiệm kết nối ổn định với Client ID & Client Secret riêng.",
-    "🎯 Cải Thiện Giao Diện & Danh Sách Game: Chuẩn hóa kích thước khung danh sách sv-listbox (min 200px - max 300px), khắc phục dứt điểm lỗi tràn layout dropdown gợi ý game."
+    "🚀 Phát hành bản cập nhật Omnisave v1.3.0 với bộ nhận diện thương hiệu mới và tối ưu hiệu năng cốt lõi:",
+    "✨ Đổi Mới Toàn Diện Giao Diện Logo & Splash Screen: Cập nhật logo nhận diện thương hiệu mới cho toàn bộ ứng dụng, thanh Taskbar và tích hợp xuyên suốt từ màn hình khởi động (Splash Screen) đến màn hình Loading (Web).",
+    "⚡ Khắc Phục Tuyệt Đối Độ Trễ Cửa Sổ (Stutter): Can thiệp sâu vào lõi trình duyệt WebView2 để vô hiệu hóa cơ chế 'Ngủ đông', giúp ứng dụng bật mở và phóng to từ Taskbar mượt mà tức thì 0ms mà không còn bị chớp đen hay khựng khung hình.",
+    "🛠 Nâng Cấp Kiến Trúc Ghi Nhật Ký (Serilog): Nâng giới hạn kích thước file nhật ký lên 100MB và bổ sung cơ chế tự động xoay vòng file theo từng tháng (RollingInterval.Month) để bảo toàn lịch sử dài hạn.",
+    "🚀 Thuật Toán Đọc Log Siêu Tốc (Zero-RAM): Thay đổi hoàn toàn cơ chế nạp log trên giao diện bằng kỹ thuật Pointer Stream đọc ngược từ cuối file lên. Giúp tải tức thời danh sách log dù file có lên đến 100MB mà gần như không tốn thêm 1MB RAM nào."
   ]
 }

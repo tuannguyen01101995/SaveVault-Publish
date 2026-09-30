@@ -1,9 +1,16 @@
 ﻿# Nhat Ky Thay Doi (Changelog)
 
-Tat ca cac thay doi va ban cap nhat dang chu y cua du an **SaveVault** duoc ghi lai tai tai lieu nay.
+Tat ca cac thay doi va ban cap nhat dang chu y cua du an **Omnisave** duoc ghi lai tai tai lieu nay.
+
+## [v1.3.0] - 2026-09-30
+- 🚀 Phát hành bản cập nhật Omnisave v1.3.0 với bộ nhận diện thương hiệu mới và tối ưu hiệu năng cốt lõi:
+- ✨ Đổi Mới Toàn Diện Giao Diện Logo & Splash Screen: Cập nhật logo nhận diện thương hiệu mới cho toàn bộ ứng dụng, thanh Taskbar và tích hợp xuyên suốt từ màn hình khởi động (Splash Screen) đến màn hình Loading (Web).
+- ⚡ Khắc Phục Tuyệt Đối Độ Trễ Cửa Sổ (Stutter): Can thiệp sâu vào lõi trình duyệt WebView2 để vô hiệu hóa cơ chế 'Ngủ đông', giúp ứng dụng bật mở và phóng to từ Taskbar mượt mà tức thì 0ms mà không còn bị chớp đen hay khựng khung hình.
+- 🛠 Nâng Cấp Kiến Trúc Ghi Nhật Ký (Serilog): Nâng giới hạn kích thước file nhật ký lên 100MB và bổ sung cơ chế tự động xoay vòng file theo từng tháng (RollingInterval.Month) để bảo toàn lịch sử dài hạn.
+- 🚀 Thuật Toán Đọc Log Siêu Tốc (Zero-RAM): Thay đổi hoàn toàn cơ chế nạp log trên giao diện bằng kỹ thuật Pointer Stream đọc ngược từ cuối file lên. Giúp tải tức thời danh sách log dù file có lên đến 100MB mà gần như không tốn thêm 1MB RAM nào.
 
 ## [v1.2.0] - 2026-09-29
-- 🚀 Phát hành phiên bản SaveVault v1.2.0 với nhiều tính năng mới và nâng cấp trải nghiệm:
+- 🚀 Phát hành phiên bản Omnisave v1.2.0 với nhiều tính năng mới và nâng cấp trải nghiệm:
 - ℹ️ Bổ Sung Tab Thông Tin & Hỗ Trợ: Thêm tab chuyên biệt ngoài cùng bên phải thanh điều hướng sv-nav-bar, tích hợp cơ chế nạp tĩnh trực tiếp vào mã nguồn lúc build (Zero Disk I/O) giúp mở tức thì không tốn tài nguyên ổ đĩa.
 - 📜 Xem Nhật Ký Phiên Bản: Thêm nút tra cứu lịch sử changelog trực tiếp tại card Phiên bản & Cập nhật trong Cài đặt với giao diện timeline trực quan.
 - ☁️ Tối Ưu Thanh Dung Lượng Cloud: Sửa triệt để lỗi thanh dung lượng OneDrive bị tràn 100% khi còn trống và bổ sung khả năng nạp hạn mức chính xác cho Google Drive bằng Custom Credentials.
@@ -11,22 +18,22 @@ Tat ca cac thay doi va ban cap nhat dang chu y cua du an **SaveVault** duoc ghi 
 - 🎯 Cải Thiện Giao Diện & Danh Sách Game: Chuẩn hóa kích thước khung danh sách sv-listbox (min 200px - max 300px), khắc phục dứt điểm lỗi tràn layout dropdown gợi ý game.
 
 ## [v1.1.1] - 2026-09-29
-- 🛠️ Bản vá lỗi nóng (Hotfix v1.1.1) khắc phục sự cố Auto-Updater:
-- ⚡ Khắc Phục Lỗi Dừng Cửa Sổ Cập Nhật: Sửa triệt để lỗi cú pháp phân tích lệnh batch (update_runner.bat) khiến cửa sổ console dừng lại ở lệnh 'pause' dù cập nhật đã hoàn tất thành công 100% (Exit code: 0).
-- 🚀 Tự Động Khởi Chạy Mượt Mà: Cửa sổ cập nhật tự động đóng tức thì sau khi hoàn tất chép đè và khởi động lại SaveVault mà không cần người dùng phải bấm phím thủ công.
-- 🛡️ Tối Ưu An Toàn Tiến Trình: Tinh gọn cơ chế kiểm tra mã thoát (Exit code) và bảo toàn tính năng giữ lại cửa sổ để tra cứu lỗi chỉ khi gặp sự cố thực tế.
+- ??? B?n v� l?i n�ng (Hotfix v1.1.1) kh?c ph?c s? c? Auto-Updater:
+- ? Kh?c Ph?c L?i D?ng C?a S? C?p Nh?t: S?a tri?t d? l?i c� ph�p ph�n t�ch l?nh batch (update_runner.bat) khi?n c?a s? console d?ng l?i ? l?nh 'pause' d� c?p nh?t d� ho�n t?t th�nh c�ng 100% (Exit code: 0).
+- ?? T? �?ng Kh?i Ch?y Mu?t M�: C?a s? c?p nh?t t? d?ng d�ng t?c th� sau khi ho�n t?t ch�p d� v� kh?i d?ng l?i Omnisave m� kh�ng c?n ngu?i d�ng ph?i b?m ph�m th? c�ng.
+- ??? T?i Uu An To�n Ti?n Tr�nh: Tinh g?n co ch? ki?m tra m� tho�t (Exit code) v� b?o to�n t�nh nang gi? l?i c?a s? d? tra c?u l?i ch? khi g?p s? c? th?c t?.
 
 ## [v1.1.0] - 2026-09-29
-- 🚀 Phát hành phiên bản SaveVault v1.1.0 với nhiều tính năng và cải tiến vượt trội:
-- ☁️ Sao Lưu & Khôi Phục Database Lên Cloud: Hỗ trợ sao lưu toàn bộ cơ sở dữ liệu SQLite (danh mục game, lịch sử sao lưu) lên Google Drive & OneDrive bằng công nghệ VACUUM INTO an toàn, không khóa bảng.
-- 🛡️ Chính Sách Lưu Trữ Database Thông Minh (Retention Policy): Giữ tối đa 5 bản sao lưu database gần nhất, tự động xóa các bản cũ trên đám mây và làm sạch lịch sử.
-- 🔄 Nâng Cấp Hệ Thống Auto-Update: Thêm cơ chế tự động Rollback hoàn tác khi gặp sự cố, cửa sổ console trực quan theo dõi tiến trình nâng cấp và độ trễ an toàn khi tắt app.
-- 🎯 Cải Thiện Trải Nghiệm Giao Diện: Bổ sung hộp thoại xác nhận trước khi sao lưu/khôi phục database với màu sắc và nhãn nút chuyên biệt; sửa lỗi đè lớp z-index giữa các modal.
-- ✨ Đồng Bộ Giao Diện Nút Bấm: Chuẩn hóa kích thước nút Primary trên các modal Cài đặt và Auto-Update cho trải nghiệm mượt mà, nhất quán.
+- ?? Ph�t h�nh phi�n b?n Omnisave v1.1.0 v?i nhi?u t�nh nang v� c?i ti?n vu?t tr?i:
+- ?? Sao Luu & Kh�i Ph?c Database L�n Cloud: H? tr? sao luu to�n b? co s? d? li?u SQLite (danh m?c game, l?ch s? sao luu) l�n Google Drive & OneDrive b?ng c�ng ngh? VACUUM INTO an to�n, kh�ng kh�a b?ng.
+- ??? Ch�nh S�ch Luu Tr? Database Th�ng Minh (Retention Policy): Gi? t?i da 5 b?n sao luu database g?n nh?t, t? d?ng x�a c�c b?n cu tr�n d�m m�y v� l�m s?ch l?ch s?.
+- ?? N�ng C?p H? Th?ng Auto-Update: Th�m co ch? t? d?ng Rollback ho�n t�c khi g?p s? c?, c?a s? console tr?c quan theo d�i ti?n tr�nh n�ng c?p v� d? tr? an to�n khi t?t app.
+- ?? C?i Thi?n Tr?i Nghi?m Giao Di?n: B? sung h?p tho?i x�c nh?n tru?c khi sao luu/kh�i ph?c database v?i m�u s?c v� nh�n n�t chuy�n bi?t; s?a l?i d� l?p z-index gi?a c�c modal.
+- ? �?ng B? Giao Di?n N�t B?m: Chu?n h�a k�ch thu?c n�t Primary tr�n c�c modal C�i d?t v� Auto-Update cho tr?i nghi?m mu?t m�, nh?t qu�n.
 
 ## [v1.0.0] - 2026-09-29
-- 🛠️ Bản vá lỗi nóng (Hotfix v1.1.1) khắc phục sự cố Auto-Updater:
-- ⚡ Khắc Phục Lỗi Dừng Cửa Sổ Cập Nhật: Sửa triệt để lỗi cú pháp phân tích lệnh batch (update_runner.bat) khiến cửa sổ console dừng lại ở lệnh 'pause' dù cập nhật đã hoàn tất thành công 100% (Exit code: 0).
-- 🚀 Tự Động Khởi Chạy Mượt Mà: Cửa sổ cập nhật tự động đóng tức thì sau khi hoàn tất chép đè và khởi động lại SaveVault mà không cần người dùng phải bấm phím thủ công.
-- 🛡️ Tối Ưu An Toàn Tiến Trình: Tinh gọn cơ chế kiểm tra mã thoát (Exit code) và bảo toàn tính năng giữ lại cửa sổ để tra cứu lỗi chỉ khi gặp sự cố thực tế.
+- ??? B?n v� l?i n�ng (Hotfix v1.1.1) kh?c ph?c s? c? Auto-Updater:
+- ? Kh?c Ph?c L?i D?ng C?a S? C?p Nh?t: S?a tri?t d? l?i c� ph�p ph�n t�ch l?nh batch (update_runner.bat) khi?n c?a s? console d?ng l?i ? l?nh 'pause' d� c?p nh?t d� ho�n t?t th�nh c�ng 100% (Exit code: 0).
+- ?? T? �?ng Kh?i Ch?y Mu?t M�: C?a s? c?p nh?t t? d?ng d�ng t?c th� sau khi ho�n t?t ch�p d� v� kh?i d?ng l?i Omnisave m� kh�ng c?n ngu?i d�ng ph?i b?m ph�m th? c�ng.
+- ??? T?i Uu An To�n Ti?n Tr�nh: Tinh g?n co ch? ki?m tra m� tho�t (Exit code) v� b?o to�n t�nh nang gi? l?i c?a s? d? tra c?u l?i ch? khi g?p s? c? th?c t?.
 
