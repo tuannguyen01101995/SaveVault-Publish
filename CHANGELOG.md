@@ -2,6 +2,12 @@
 
 Tat ca cac thay doi va ban cap nhat dang chu y cua du an **Omnisave** duoc ghi lai tai tai lieu nay.
 
+## [v1.3.2] - 2026-09-30
+- 🔥 Bản vá lỗi & Nâng cấp (Hotfix v1.3.2) tối ưu hệ thống theo vết (Trace):
+- 🛠 Bổ Sung Truy Vết (Trace-Id) Toàn Diện: Áp dụng BeginTrace tự động gắn nhãn Trace-Id cho TẤT CẢ các luồng xử lý lõi (Core) của hệ thống bao gồm: Sao lưu game, Khôi phục, Đồng bộ Cloud (Google Drive/OneDrive), Quản lý Database và Hoàn tác (Revert).
+- 🐛 Khắc Phục Lỗi Biên Dịch (Bug đỏ): Sửa lỗi tham chiếu sai thuộc tính trong quá trình nâng cấp Log, đảm bảo ứng dụng Build thành công 100%.
+- 🧹 Dọn Dẹp Mã Nguồn: Đã xóa an toàn service thừa (KnownGameCatalogService) không còn được sử dụng để làm sạch mã nguồn.
+
 ## [v1.3.1] - 2026-09-30
 - 🚀 Bản vá lỗi (Hotfix v1.3.1) nâng cấp trải nghiệm người dùng:
 - 🎮 Cập Nhật Danh Mục Game Ludusavi Trực Quan: Bổ sung hộp thoại xác nhận trước khi hệ thống tự động tải danh sách game mới, kèm theo thanh tiến trình theo dõi thời gian thực thay vì tiến trình tải ngầm.
@@ -35,7 +41,7 @@ Tat ca cac thay doi va ban cap nhat dang chu y cua du an **Omnisave** duoc ghi l
 - 🎨 Cải Thiện Trải Nghiệm Giao Diện: Bổ sung hộp thoại xác nhận trước khi sao lưu/khôi phục database với màu sắc và nhãn nút chuyên biệt; sửa lỗi đè lớp z-index giữa các modal.
 - ✨ Đồng Bộ Giao Diện Nút Bấm: Chuẩn hóa kích thước nút Primary trên các modal Cài đặt và Auto-Update cho trải nghiệm mượt mà, nhất quán.
 
-## [v1.0.0] - 2026-09-29
-- 🚀 Phát hành phiên bản Omnisave với hỗ trợ sao lưu và đồng bộ Cloud.
-- ✨ Tự động nhận diện save game và bảo vệ dữ liệu bằng Safety Snapshots.
+## [v1.0.0] - 2026-09-30
+- 🚀 Bản vá lỗi (Hotfix v1.3.1) nâng cấp trải nghiệm người dùng:
+- 🎮 Cập Nhật Danh Mục Game Ludusavi Trực Quan: Bổ sung hộp thoại xác nhận trước khi hệ thống tự động tải danh sách game mới, kèm theo thanh tiến trình theo dõi thời gian thực thay vì tiến trình tải ngầm.
 
