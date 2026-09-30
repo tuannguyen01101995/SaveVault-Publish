@@ -1,13 +1,10 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "releaseDate": "2026-09-30",
   "minSupportedVersion": "1.0.0",
-  "downloadUrl": "https://github.com/tuannguyen01101995/Omnisave-Publish/archive/refs/heads/main.zip",
+  "downloadUrl": "https://github.com/tuannguyen01101995/SaveVault-Publish/archive/refs/heads/main.zip",
   "changelog": [
-    "🚀 Phát hành bản cập nhật Omnisave v1.3.0 với bộ nhận diện thương hiệu mới và tối ưu hiệu năng cốt lõi:",
-    "✨ Đổi Mới Toàn Diện Giao Diện Logo & Splash Screen: Cập nhật logo nhận diện thương hiệu mới cho toàn bộ ứng dụng, thanh Taskbar và tích hợp xuyên suốt từ màn hình khởi động (Splash Screen) đến màn hình Loading (Web).",
-    "⚡ Khắc Phục Tuyệt Đối Độ Trễ Cửa Sổ (Stutter): Can thiệp sâu vào lõi trình duyệt WebView2 để vô hiệu hóa cơ chế 'Ngủ đông', giúp ứng dụng bật mở và phóng to từ Taskbar mượt mà tức thì 0ms mà không còn bị chớp đen hay khựng khung hình.",
-    "🛠 Nâng Cấp Kiến Trúc Ghi Nhật Ký (Serilog): Nâng giới hạn kích thước file nhật ký lên 100MB và bổ sung cơ chế tự động xoay vòng file theo từng tháng (RollingInterval.Month) để bảo toàn lịch sử dài hạn.",
-    "🚀 Thuật Toán Đọc Log Siêu Tốc (Zero-RAM): Thay đổi hoàn toàn cơ chế nạp log trên giao diện bằng kỹ thuật Pointer Stream đọc ngược từ cuối file lên. Giúp tải tức thời danh sách log dù file có lên đến 100MB mà gần như không tốn thêm 1MB RAM nào."
+    "🚀 Bản vá lỗi (Hotfix v1.3.1) nâng cấp trải nghiệm người dùng:",
+    "🎮 Cập Nhật Danh Mục Game Ludusavi Trực Quan: Bổ sung hộp thoại xác nhận trước khi hệ thống tự động tải danh sách game mới, kèm theo thanh tiến trình theo dõi thời gian thực thay vì tiến trình tải ngầm."
   ]
 }
