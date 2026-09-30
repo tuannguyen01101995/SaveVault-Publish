@@ -2,6 +2,9 @@
 
 Tat ca cac thay doi va ban cap nhat dang chu y cua du an **Omnisave** duoc ghi lai tai tai lieu nay.
 
+## [v1.3.4] - 2026-09-30
+- 🚀 Test Auto Update
+
 ## [v1.3.3] - 2026-09-30
 - 🚀 Bản Cập Nhật v1.3.3 Nâng Cấp Hệ Thống Truy Vết Ghi Nhật Ký (Logging Trace):
 - 🧠 Kế Thừa Trace-Id Thông Minh (AsyncLocal): Nâng cấp hàm BeginTrace cho phép các service con tự động nhận diện và sử dụng chung Trace-Id từ service cha (hoặc ViewModel), đảm bảo tất cả các log của một chức năng được nhóm chung dưới 1 ID duy nhất.

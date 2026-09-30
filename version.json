@@ -1,11 +1,9 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "releaseDate": "2026-09-30",
   "minSupportedVersion": "1.0.0",
   "downloadUrl": "https://github.com/tuannguyen01101995/SaveVault-Publish/archive/refs/heads/main.zip",
   "changelog": [
-    "🚀 Bản Cập Nhật v1.3.3 Nâng Cấp Hệ Thống Truy Vết Ghi Nhật Ký (Logging Trace):",
-    "🧠 Kế Thừa Trace-Id Thông Minh (AsyncLocal): Nâng cấp hàm BeginTrace cho phép các service con tự động nhận diện và sử dụng chung Trace-Id từ service cha (hoặc ViewModel), đảm bảo tất cả các log của một chức năng được nhóm chung dưới 1 ID duy nhất.",
-    "🔄 Truy Vết Xuyên Tiến Trình (Cross-Process Tracing): Khắc phục triệt để lỗi đứt gãy Trace-Id khi chạy Auto Update. Hệ thống nay đã có thể tự động lưu Trace-Id ra file tạm trước khi tắt app và khôi phục lại khi bật app, giúp kết nối liền mạch log từ lúc tải đến lúc ghi nhận thành công/thất bại."
+    "🚀 Test Auto Update"
   ]
 }
