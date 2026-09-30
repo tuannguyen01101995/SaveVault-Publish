@@ -2,6 +2,11 @@
 
 Tat ca cac thay doi va ban cap nhat dang chu y cua du an **Omnisave** duoc ghi lai tai tai lieu nay.
 
+## [v1.3.3] - 2026-09-30
+- 🚀 Bản Cập Nhật v1.3.3 Nâng Cấp Hệ Thống Truy Vết Ghi Nhật Ký (Logging Trace):
+- 🧠 Kế Thừa Trace-Id Thông Minh (AsyncLocal): Nâng cấp hàm BeginTrace cho phép các service con tự động nhận diện và sử dụng chung Trace-Id từ service cha (hoặc ViewModel), đảm bảo tất cả các log của một chức năng được nhóm chung dưới 1 ID duy nhất.
+- 🔄 Truy Vết Xuyên Tiến Trình (Cross-Process Tracing): Khắc phục triệt để lỗi đứt gãy Trace-Id khi chạy Auto Update. Hệ thống nay đã có thể tự động lưu Trace-Id ra file tạm trước khi tắt app và khôi phục lại khi bật app, giúp kết nối liền mạch log từ lúc tải đến lúc ghi nhận thành công/thất bại.
+
 ## [v1.3.2] - 2026-09-30
 - 🔥 Bản vá lỗi & Nâng cấp (Hotfix v1.3.2) tối ưu hệ thống theo vết (Trace):
 - 🛠 Bổ Sung Truy Vết (Trace-Id) Toàn Diện: Áp dụng BeginTrace tự động gắn nhãn Trace-Id cho TẤT CẢ các luồng xử lý lõi (Core) của hệ thống bao gồm: Sao lưu game, Khôi phục, Đồng bộ Cloud (Google Drive/OneDrive), Quản lý Database và Hoàn tác (Revert).
