@@ -1,9 +1,12 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.2",
   "releaseDate": "2026-09-30",
   "minSupportedVersion": "1.0.0",
   "downloadUrl": "https://github.com/tuannguyen01101995/SaveVault-Publish/archive/refs/heads/main.zip",
   "changelog": [
-    "🔥 Test Auto Update"
+    "🔥 Bản vá lỗi & Nâng cấp (Hotfix v1.3.2) tối ưu hệ thống theo vết (Trace):",
+    "🛠 Bổ Sung Truy Vết (Trace-Id) Toàn Diện: Áp dụng BeginTrace tự động gắn nhãn Trace-Id cho TẤT CẢ các luồng xử lý lõi (Core) của hệ thống bao gồm: Sao lưu game, Khôi phục, Đồng bộ Cloud (Google Drive/OneDrive), Quản lý Database và Hoàn tác (Revert).",
+    "🐛 Khắc Phục Lỗi Biên Dịch (Bug đỏ): Sửa lỗi tham chiếu sai thuộc tính trong quá trình nâng cấp Log, đảm bảo ứng dụng Build thành công 100%.",
+    "🧹 Dọn Dẹp Mã Nguồn: Đã xóa an toàn service thừa (KnownGameCatalogService) không còn được sử dụng để làm sạch mã nguồn."
   ]
 }
